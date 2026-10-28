@@ -1,0 +1,363 @@
+.chef-theatre {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  padding: 0 clamp(20px, 6vw, 100px);
+  overflow: clip;
+  color: #eee5d5;
+  background: #0b0a09;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.chef-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.chef-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: 80px;
+  right: 4%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #9b4e1738, transparent 70%);
+  filter: blur(35px);
+}
+
+.chef-glow-two {
+  top: auto;
+  bottom: 0;
+  left: -160px;
+  background: radial-gradient(circle, #b58a3220, transparent 70%);
+}
+
+.chef-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image:
+    linear-gradient(#d9b97912 1px, transparent 1px),
+    linear-gradient(90deg, #d9b97912 1px, transparent 1px);
+  background-size: 70px 70px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+.chef-nav {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #ffffff18;
+  font-family: Arial, sans-serif;
+}
+
+.chef-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  padding: 10px 0;
+  color: #c7bba6;
+  background: transparent;
+  cursor: pointer;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.chef-brand {
+  color: #d6b779;
+  font-size: 19px;
+  letter-spacing: 5px;
+}
+
+.chef-nav-label,
+.chef-footer {
+  color: #a59a88;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.chef-hero {
+  min-height: 590px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 0 90px;
+}
+
+.chef-intro {
+  max-width: 560px;
+}
+
+.chef-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #d2ad6d;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.chef-intro h1 {
+  margin: 25px 0;
+  font-size: clamp(44px, 5.5vw, 78px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -2px;
+}
+
+.chef-intro h1 em,
+.chef-section-heading h2 em {
+  color: #d0ad70;
+  font-weight: 400;
+}
+
+.chef-intro > p {
+  max-width: 430px;
+  color: #b4aa9b;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.chef-primary {
+  margin-top: 25px;
+  padding: 16px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #bfa06b;
+  color: #ead9b9;
+  background: #b18a4514;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+
+.chef-primary:hover {
+  color: #15110b;
+  background: #d0ad70;
+}
+
+.chef-artwork {
+  position: relative;
+  min-height: 380px;
+  display: grid;
+  place-items: center;
+}
+
+.chef-orbit {
+  position: absolute;
+  width: min(75%, 320px);
+  aspect-ratio: 1;
+  border: 1px solid #c59c5c40;
+  border-radius: 50%;
+}
+
+.chef-orbit-two {
+  width: min(95%, 400px);
+  border-color: #c59c5c1c;
+}
+
+.chef-fire {
+  width: 180px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  color: #f0bd66;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #bc5d2440,
+    #4d251a24 48%,
+    transparent 72%
+  );
+  filter: drop-shadow(0 0 35px #d67b2c55);
+  animation: chef-fire-glow 3s ease-in-out infinite alternate;
+}
+
+.chef-artwork-caption {
+  position: absolute;
+  bottom: 8px;
+  color: #b2a18a;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+@keyframes chef-fire-glow {
+  from {
+    transform: scale(0.96);
+    filter: drop-shadow(0 0 20px #d67b2c30);
+  }
+  to {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 45px #d67b2c70);
+  }
+}
+
+.chef-creations {
+  padding: 25px 0 85px;
+  border-top: 1px solid #ffffff18;
+}
+
+.chef-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 35px;
+  color: #d2ad6d;
+}
+
+.chef-section-heading h2 {
+  margin: 14px 0 0;
+  color: #eee5d5;
+  font-size: clamp(30px, 4vw, 45px);
+  font-weight: 400;
+}
+
+.chef-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.chef-card {
+  position: relative;
+  min-height: 235px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ffffff18;
+  background: linear-gradient(145deg, #ffffff08, #ffffff02);
+  transition:
+    border-color 0.3s,
+    transform 0.3s;
+}
+
+.chef-card:hover {
+  transform: translateY(-5px);
+  border-color: #c6a26380;
+}
+
+.chef-card-number {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  color: #a98b5c;
+  font-size: 13px;
+}
+
+.chef-card-tag {
+  color: #c9a665;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.chef-card h3 {
+  margin: 25px 0 10px;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.chef-card p {
+  margin: 0 0 25px;
+  color: #b4aa9b;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.chef-text-link {
+  margin-top: auto;
+  padding: 8px 0;
+  border: 0;
+  color: #d3b577;
+  background: transparent;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.chef-footer {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid #ffffff18;
+}
+
+@media (max-width: 760px) {
+  .chef-nav {
+    min-height: 70px;
+  }
+
+  .chef-brand {
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+
+  .chef-nav-label {
+    display: none;
+  }
+
+  .chef-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 70px 0 55px;
+  }
+
+  .chef-intro h1 {
+    font-size: clamp(44px, 11vw, 66px);
+  }
+
+  .chef-artwork {
+    min-height: 300px;
+  }
+
+  .chef-creations {
+    padding-bottom: 50px;
+  }
+
+  .chef-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .chef-card {
+    min-height: 205px;
+  }
+
+  .chef-footer {
+    flex-wrap: wrap;
+    padding: 20px 0;
+    line-height: 1.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chef-fire {
+    animation: none;
+  }
+
+  .chef-card,
+  .chef-primary {
+    transition: none;
+  }
+}
