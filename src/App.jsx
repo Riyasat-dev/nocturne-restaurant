@@ -16,6 +16,7 @@ import { useReducedMotion } from "./hooks/useReducedMotion";
 import { useWebGLSupport } from "./hooks/useWebGLSupport";
 import { soundManager } from "./audio/SoundEffects";
 import ChefTheatre from "./components/ChefTheatre";
+import Footer from "./components/Footer";
 function AppContent() {
   // Current active scene: 'lamp' | 'entrance' | 'dining' | 'menu' | 'checkout'
   const [currentScene, setCurrentScene] = useState("lamp");
@@ -316,6 +317,8 @@ function AppContent() {
           onExploreMenu={() => setCurrentScene("menu")}
         />
       )}
+      {/* Restaurant Footer */}
+      {isScrollableScene && <Footer onNavigate={handleSelectScene} />}
     </main>
   );
 }

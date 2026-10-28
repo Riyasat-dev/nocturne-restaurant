@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, ArrowLeft, ChefHat, Flame, Sparkles } from "lucide-react";
+import { ArrowDown, ChefHat, Flame, Sparkles } from "lucide-react";
 import "./ChefTheatre.css";
 
 const creations = [
@@ -27,7 +27,7 @@ const creations = [
   },
 ];
 
-export default function ChefTheatre({ onBack, onExploreMenu }) {
+export default function ChefTheatre({ onExploreMenu }) {
   const sectionRef = useRef(null);
   const reducedMotion = useReducedMotion();
 
@@ -55,14 +55,14 @@ export default function ChefTheatre({ onBack, onExploreMenu }) {
       </div>
 
       <header className="chef-nav">
-        <button className="chef-back" onClick={onBack}>
+        {/* <button className="chef-back" onClick={onBack}>
           <ArrowLeft size={16} />
           <span>BACK TO DINING</span>
-        </button>
+        </button> */}
 
-        <span className="chef-brand">NOCTURNE</span>
+        {/* <span className="chef-brand">NOCTURNE</span> */}
 
-        <span className="chef-nav-label">THE KITCHEN</span>
+        {/* <span className="chef-nav-label">THE KITCHEN</span> */}
       </header>
 
       <div className="chef-hero">
