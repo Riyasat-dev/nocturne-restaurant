@@ -53,18 +53,6 @@ export default function ChefTheatre({ onExploreMenu }) {
         <div className="chef-glow chef-glow-two" />
         <div className="chef-grid" />
       </div>
-
-      <header className="chef-nav">
-        {/* <button className="chef-back" onClick={onBack}>
-          <ArrowLeft size={16} />
-          <span>BACK TO DINING</span>
-        </button> */}
-
-        {/* <span className="chef-brand">NOCTURNE</span> */}
-
-        {/* <span className="chef-nav-label">THE KITCHEN</span> */}
-      </header>
-
       <div className="chef-hero">
         <motion.div
           initial={reducedMotion ? false : { opacity: 0, y: 25 }}
